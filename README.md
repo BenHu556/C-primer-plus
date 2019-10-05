@@ -1,2 +1,2 @@
-# C-primer-plus
-课后习题
+# C++-primer-plus
+C++-primer-plus的课后习题
