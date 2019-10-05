@@ -1,3 +1,4 @@
+//1
 #include <iostream>
 #include <cctype>
 using namespace std;
@@ -65,3 +66,11 @@ int main()
 		<< others << " others.\n ";
 	return 0;
 }
+
+
+
+//2
+
+
+
+
