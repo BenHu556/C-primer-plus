@@ -153,6 +153,107 @@ int main()
 
 
 //4
+#include <iostream>
+using namespace std;
+const int strsize = 30;
+struct bop
+{
+	char fullname[strsize];
+	char title[strsize];
+	char bopname[strsize];
+	int preference;
+};
+
+void display_by_name(struct bop *bopArray, unsigned int size)
+{
+	for (int i = 0; i < size; i++)
+		cout << bopArray[i].fullname << endl;
+}
+
+void display_by_title(struct bop* bopArray, unsigned int size)
+{
+	for (int i = 0; i < size; i++)
+		cout << bopArray[i].title << endl;
+}
+
+void display_by_bopname(struct bop* bopArray, unsigned int size)
+{
+	for (int i = 0; i < size; i++)
+		cout << bopArray[i].bopname << endl;
+}
+
+void dispiay_by_preference(struct bop* bopArray, unsigned int size)
+{
+	for(int i = 0; i < size; i++)
+	{ 
+	
+		if (bopArray[i].preference == 0)
+		{
+			
+			cout << bopArray[i].fullname << endl;
+		}
+		else if (bopArray[i].preference == 1)
+		{
+			cout << bopArray[i].title << endl;
+		}
+		else if (bopArray[i].preference == 2)
+		{
+			cout << bopArray[i].bopname << endl;
+
+		}
+	}
+}
+
+void showmenu()
+{
+	cout << "Benevolent Order of Programmers Report\n"
+		"a. display by name            b. display by title\n"
+		"c. display by bopname         d. display by preference\n"
+		"q. quit\n";
+}
+
+
+int main()
+{
+	struct bop bopArray[5] =
+	{
+		{"Wimp Macho",    "Wim Macho",             "Y---", 1},
+		{"Raki Rhodes",   "Junior Programmer",     "3XXXX", 1},
+		{"Celia Laiter",  "MIPS",                  "3AAAA", 1},
+		{"Hoppy Hipman",  "Analyst Trainee",       "3BBBB", 1},
+		{"Pat Hand",      "LOOPY",                 "3CCCC", 1}
+	};
+	showmenu();
+	char ch;
+
+	cout << "Enter your choices: " << endl;
+	cin.get(ch);
+	while (ch != 'q')
+	{
+		switch (ch)
+		{
+		case 'a': 
+			display_by_name(bopArray,5);
+			break;
+		case 'b':
+			display_by_title(bopArray, 5);
+			break;
+		case 'c':
+			display_by_bopname(bopArray, 5);
+			break;
+		case 'd': 
+			dispiay_by_preference(bopArray, 5);
+		default:break;
+		}
+		cout << "Next choice: ";
+		cin.get();
+		cin.get(ch);
+	}
+	cout << "Bye!" << endl;
+	system("pause");
+	return 0;
+}
+
 
 
 
