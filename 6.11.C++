@@ -70,6 +70,89 @@ int main()
 
 
 //2
+//#include <iostream>
+//using namespace std;
+//const int ArSize = 10;
+//int main()
+//{
+//	double num[ArSize];
+//	cout << "Please enter a number: " << endl;
+//	for (int i = 0; i < ArSize; i++)
+//	{
+//		cout << "donation #" << i + 1 << " : ";
+//		while (!(cin >> num[i]))
+//		{
+//			cin.clear();
+//			while (cin.get() != '\n')
+//				continue;
+//			cout << "Please enter a number: ";
+//		}
+//	}
+//	double total = 0;
+//	for (int i = 0; i < ArSize; i++)
+//	{
+//		total += num[i];
+//	}
+//	double ave = total / ArSize;
+//	cout << "这些数字的总和为：" << total << endl;
+//	cout << "这些数字的平均值为：" << ave << endl;
+//	int line = 0;
+//	for (int i = 0; i < ArSize; i++)
+//	{
+//		if (num[i] > ave)
+//		{
+//			line++;
+//		}
+//	}
+//	cout << "一共有 " << line << " 个数字大于它们的平均值";
+//	return 0;
+//}
+
+
+
+//3
+#include <iostream>
+using namespace std;
+void showmenu()
+{
+	cout << "Please enter one of the following choices:\n"
+		"c) carnivore                       p) pianist\n"
+		"t) tree                            g) game\n";
+}
+
+void tree()
+{
+	cout << "A maples is a tree";
+}
+
+int main()
+{
+	showmenu();
+	char ch;
+	cout << "Pleasee enter a c, p, t, or g: ";
+	cin.get(ch);
+	while (ch != '\n')
+	{
+		switch (ch)
+		{
+		case 'c': break;
+		case 'p': break;
+		case 't':
+			tree();
+			break;
+		case 'g': break;
+		default: cout << "Pleasee enter a c, p, t, or g: ";
+		}
+		cin.get();
+		cin.get(ch);
+	}
+	system("pause");
+	return 0;
+}
+
+
+
+//4
 
 
 
